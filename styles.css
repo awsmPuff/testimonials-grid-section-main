@@ -1,0 +1,135 @@
+:root {
+    --moderate-violet: hsl(263, 55%, 52%);
+    --very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --very-dark-blackish-blue: hsl(219, 29%, 14%);
+    --white: hsl(0, 0%, 100%);
+    --light-gray: hsl(0, 0%, 81%);
+    --light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    background-color: var(--light-grayish-blue);
+    color: var(--white);
+    font-weight: 500;
+    line-height: 17px;
+    letter-spacing: 0.5px;
+}
+
+.container {
+    display: grid;
+    grid-template-areas: "area-1 area-1 area-2 area-5"
+                         "area-3 area-4 area-4 area-5";
+    gap: 20px 30px;
+}
+
+article {
+    border-radius: 10px;
+    height: 280px;
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+.a-1 {
+    grid-area: area-1;
+    background-image: url(./images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position: 80% 0%;
+    background-color: var(--moderate-violet);
+}
+.a-2 {
+    grid-area: area-2;
+    width: 200;
+    background-color: var(--very-dark-grayish-blue);
+}
+.a-3 {
+    grid-area: area-3;
+    background-color: var(--white);
+    color: var(--very-dark-grayish-blue);
+}
+.a-4 {
+    grid-area: area-4;
+    background-color: var(--very-dark-blackish-blue);
+}
+.a-5 {
+    grid-area: area-5;
+    height: 590px;
+    background-color: var(--white);
+    color: var(--very-dark-grayish-blue);
+}
+
+.a-1,
+.a-4 {
+    width: 530px;
+}
+
+.a-2,
+.a-3,
+.a-5 {
+    width: 250px;
+}
+
+.person {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.state {
+    opacity: 0.5;
+}
+
+.review {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 20px;
+}
+
+.quotation {
+    opacity: 0.7;
+}
+
+.a-4 img {
+    border-color: var(--moderate-violet);
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+    .a-1,
+    .a-2,
+    .a-3,
+    .a-4,
+    .a-5 {
+        width: 100%;
+        height: max-content;
+    }
+   
+}
